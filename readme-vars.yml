@@ -18,7 +18,7 @@ param_container_name: "{{ project_name }}"
 param_usage_include_env: true
 param_env_vars:
   - { env_var: "BASE_URL", env_value: "https://planka.example.com", desc: "The URL you will use to access planka including protocol, and port if not 80/443." }
-  - { env_var: "DATABASE_URL", env_value: "postgresql://user:password@planka-db/planka", desc: "Postgres database URL. Special characters must be [url encoded](https://en.wikipedia.org/wiki/Percent-encoding)." }
+  - { env_var: "DATABASE_URL", env_value: "postgresql://user:password@planka-db:5432/planka", desc: "Postgres database URL. Special characters must be [url encoded](https://en.wikipedia.org/wiki/Percent-encoding)." }
   - { env_var: "SECRET_KEY", env_value: "notasecretkey", desc: "Session encryption key, recommended 32-64 character alphanumeric." }
   - { env_var: "TRUST_PROXY", env_value: "0", desc: "Set to `1` to trust upstream proxies if reverse proxying." }
 param_usage_include_vols: true

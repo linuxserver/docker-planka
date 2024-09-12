@@ -15,6 +15,7 @@ RUN \
   apk add  --no-cache --virtual=build-dependencies \
     build-base \
     npm \
+    py3-setuptools \
     python3-dev && \
   echo "**** install planka ****" && \
   if [ -z ${PLANKA_RELEASE+x} ]; then \
@@ -55,7 +56,8 @@ LABEL maintainer="thespad"
 
 RUN \
   apk add  --no-cache \
-    nodejs && \
+    nodejs \
+    postgresql16-client && \
     printf "Linuxserver.io version: ${VERSION}\nBuild-date: ${BUILD_DATE}" > /build_version
 
 COPY --from=buildstage /build/server/ /app
