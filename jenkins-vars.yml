@@ -27,3 +27,5 @@ repo_vars:
   - CI_DOCKERENV=''
   - CI_AUTH=''
   - CI_WEBPATH=''
+sponsor_links:
+  - { name: "planka", url: "https://github.com/sponsors/meltyshev" }
