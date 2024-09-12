@@ -1,0 +1,29 @@
+---
+
+# jenkins variables
+project_name: docker-planka
+external_type: github_stable
+release_type: stable
+release_tag: latest
+ls_branch: main
+repo_vars:
+  - EXT_GIT_BRANCH = 'master'
+  - EXT_USER = 'plankanban'
+  - EXT_REPO = 'planka'
+  - BUILD_VERSION_ARG = 'PLANKA_RELEASE'
+  - LS_USER = 'linuxserver'
+  - LS_REPO = 'docker-planka'
+  - CONTAINER_NAME = 'planka'
+  - DOCKERHUB_IMAGE = 'linuxserver/planka'
+  - DEV_DOCKERHUB_IMAGE = 'lsiodev/planka'
+  - PR_DOCKERHUB_IMAGE = 'lspipepr/planka'
+  - DIST_IMAGE = 'alpine'
+  - MULTIARCH='true'
+  - CI='true'
+  - CI_WEB='true'
+  - CI_PORT='1337'
+  - CI_SSL='false'
+  - CI_DELAY='60'
+  - CI_DOCKERENV=''
+  - CI_AUTH=''
+  - CI_WEBPATH=''

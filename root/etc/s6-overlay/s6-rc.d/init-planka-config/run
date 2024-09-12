@@ -1,0 +1,28 @@
+#!/usr/bin/with-contenv bash
+# shellcheck shell=bash
+
+cd /app || exit 1
+
+s6-setuidgid abc node db/init.js
+
+symlinks=(
+    /app/public/user-avatars
+    /app/public/project-background-images
+    /app/private/attachments
+)
+
+shopt -s globstar dotglob
+
+for i in "${symlinks[@]}"; do
+    if [[ ! -L "$i" ]]; then
+        mkdir -p /config/"$(basename "$i")"
+        rm -rf "$i"
+        ln -s /config/"$(basename "$i")" "$i"
+    fi
+done
+
+shopt -u globstar dotglob
+
+# permissions
+lsiown -R abc:abc \
+    /config
