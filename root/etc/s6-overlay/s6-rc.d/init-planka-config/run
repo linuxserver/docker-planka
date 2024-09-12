@@ -3,6 +3,28 @@
 
 cd /app || exit 1
 
+if [[ -n ${DATABASE_URL} ]]; then
+    DB_HOST=$(echo "${DATABASE_URL}" | awk -F '@' '{print $NF}' | awk -F ':' '{print $1}' | awk -F '/' '{print $1}')
+    DB_PORT=$(echo "${DATABASE_URL}" | awk -F '@' '{print $NF}' | awk -F ':' '{print $2}' | awk -F '/' '{print $1}')
+    if [[ ! ${DB_PORT} =~ [0-9]+ ]]; then DB_PORT="5432"; fi
+    echo "Waiting for DB ${DB_HOST} to become available on port ${DB_PORT}..."
+    END=$((SECONDS + 30))
+    while [[ ${SECONDS} -lt ${END} ]] && [[ -n "${DB_HOST+x}" ]]; do
+        if pg_isready -h "${DB_HOST}" -p "${DB_PORT}" -q; then
+            if [[ ! -f /dbwait.lock ]]; then
+                sleep 5
+            fi
+            touch /dbwait.lock
+            break
+        else
+            sleep 1
+        fi
+    done
+else
+    echo "No database configured, sleeping..."
+    sleep infinity
+fi
+
 s6-setuidgid abc node db/init.js
 
 symlinks=(
@@ -22,30 +44,6 @@ for i in "${symlinks[@]}"; do
 done
 
 shopt -u globstar dotglob
-
-if [[ -n ${DATABASE_URL} ]]; then
-    DB_HOST=$(echo "${DATABASE_URL}" | awk -F '@' '{print $NF}' | awk -F ':' '{print $1}' | awk -F '/' '{print $1}')
-    DB_PORT=$(echo "${DATABASE_URL}" | awk -F '@' '{print $NF}' | awk -F ':' '{print $2}' | awk -F '/' '{print $1}')
-    if [[ $DB_PORT != ?(-)+([[:digit:]]) ]]; then
-        DB_PORT="5432"
-    fi
-    echo "Waiting for DB ${DB_HOST} to become available on port ${DB_PORT}..."
-    END=$((SECONDS + 30))
-    while [[ ${SECONDS} -lt ${END} ]] && [[ -n "${DB_HOST+x}" ]]; do
-        if pg_isready -h "${DB_HOST}" -p "${DB_PORT}" -q; then
-            if [[ ! -f /dbwait.lock ]]; then
-                sleep 5
-            fi
-            touch /dbwait.lock
-            break
-        else
-            sleep 1
-        fi
-    done
-else
-    echo "No database configured, sleeping..."
-    sleep infinity
-fi
 
 # permissions
 lsiown -R abc:abc \
