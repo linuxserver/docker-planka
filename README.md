@@ -37,7 +37,6 @@ Find us at:
 [![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/planka.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=pulls&logo=docker)](https://hub.docker.com/r/linuxserver/planka)
 [![Docker Stars](https://img.shields.io/docker/stars/linuxserver/planka.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=stars&logo=docker)](https://hub.docker.com/r/linuxserver/planka)
 [![Jenkins Build](https://img.shields.io/jenkins/build?labelColor=555555&logoColor=ffffff&style=for-the-badge&jobUrl=https%3A%2F%2Fci.linuxserver.io%2Fjob%2FDocker-Pipeline-Builders%2Fjob%2Fdocker-planka%2Fjob%2Fmain%2F&logo=jenkins)](https://ci.linuxserver.io/job/Docker-Pipeline-Builders/job/docker-planka/job/main/)
-[![LSIO CI](https://img.shields.io/badge/dynamic/yaml?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=CI&query=CI&url=https%3A%2F%2Fci-tests.linuxserver.io%2Flinuxserver%2Fplanka%2Flatest%2Fci-status.yml)](https://ci-tests.linuxserver.io/linuxserver/planka/latest/index.html)
 
 [Planka](https://github.com/plankanban/planka/) is an elegant open source project tracking tool.
 
@@ -91,7 +90,7 @@ services:
       - PGID=1000
       - TZ=Etc/UTC
       - BASE_URL=https://planka.example.com
-      - DATABASE_URL=postgresql://user:password@planka-db/planka
+      - DATABASE_URL=postgresql://user:password@planka-db:5432/planka
       - SECRET_KEY=notasecretkey
       - TRUST_PROXY=0
     volumes:
@@ -110,7 +109,7 @@ docker run -d \
   -e PGID=1000 \
   -e TZ=Etc/UTC \
   -e BASE_URL=https://planka.example.com \
-  -e DATABASE_URL=postgresql://user:password@planka-db/planka \
+  -e DATABASE_URL=postgresql://user:password@planka-db:5432/planka \
   -e SECRET_KEY=notasecretkey \
   -e TRUST_PROXY=0 \
   -p 1337:1337 \
@@ -130,7 +129,7 @@ Containers are configured using parameters passed at runtime (such as those abov
 | `-e PGID=1000` | for GroupID - see below for explanation |
 | `-e TZ=Etc/UTC` | specify a timezone to use, see this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List). |
 | `-e BASE_URL=https://planka.example.com` | The URL you will use to access planka including protocol, and port if not 80/443. |
-| `-e DATABASE_URL=postgresql://user:password@planka-db/planka` | Postgres database URL. Special characters must be [url encoded](https://en.wikipedia.org/wiki/Percent-encoding). |
+| `-e DATABASE_URL=postgresql://user:password@planka-db:5432/planka` | Postgres database URL. Special characters must be [url encoded](https://en.wikipedia.org/wiki/Percent-encoding). |
 | `-e SECRET_KEY=notasecretkey` | Session encryption key, recommended 32-64 character alphanumeric. |
 | `-e TRUST_PROXY=0` | Set to `1` to trust upstream proxies if reverse proxying. |
 | `-v /config` | Local path for planka config files. |
