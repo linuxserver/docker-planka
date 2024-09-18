@@ -60,7 +60,7 @@ The architectures supported by this image are:
 
 Web UI is accessible at http://SERVERIP:PORT. An external postgres database is required.
 
-Default login is demo@demo.demo with a password of demo. Once you've created your own user account be sure to login to it and delete the demo account.
+Once you've run your first time setup you can safely remove the DEFAULT_ environment variables. They will overwrite any changes made to the default user in the web UI (passwords, display names, etc.) on startup if left in place.
 
 ### Migration from Official Image
 
@@ -91,6 +91,10 @@ services:
       - TZ=Etc/UTC
       - BASE_URL=https://planka.example.com
       - DATABASE_URL=postgresql://user:password@planka-db:5432/planka
+      - DEFAULT_ADMIN_EMAIL=demo@demo.demo
+      - DEFAULT_ADMIN_USERNAME=demo
+      - DEFAULT_ADMIN_PASSWORD=demo
+      - "DEFAULT_ADMIN_NAME=Demo User"
       - SECRET_KEY=notasecretkey
       - TRUST_PROXY=0
     volumes:
@@ -110,6 +114,10 @@ docker run -d \
   -e TZ=Etc/UTC \
   -e BASE_URL=https://planka.example.com \
   -e DATABASE_URL=postgresql://user:password@planka-db:5432/planka \
+  -e DEFAULT_ADMIN_EMAIL=demo@demo.demo \
+  -e DEFAULT_ADMIN_USERNAME=demo \
+  -e DEFAULT_ADMIN_PASSWORD=demo \
+  -e DEFAULT_ADMIN_NAME="Demo User" \
   -e SECRET_KEY=notasecretkey \
   -e TRUST_PROXY=0 \
   -p 1337:1337 \
@@ -130,6 +138,10 @@ Containers are configured using parameters passed at runtime (such as those abov
 | `-e TZ=Etc/UTC` | specify a timezone to use, see this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List). |
 | `-e BASE_URL=https://planka.example.com` | The URL you will use to access planka including protocol, and port if not 80/443. |
 | `-e DATABASE_URL=postgresql://user:password@planka-db:5432/planka` | Postgres database URL. Special characters must be [url encoded](https://en.wikipedia.org/wiki/Percent-encoding). |
+| `-e DEFAULT_ADMIN_EMAIL=demo@demo.demo` | Email address for default user. |
+| `-e DEFAULT_ADMIN_USERNAME=demo` | Username for default user. |
+| `-e DEFAULT_ADMIN_PASSWORD=demo` | Password for default user. |
+| `-e DEFAULT_ADMIN_NAME=Demo User` | Display name for default user. |
 | `-e SECRET_KEY=notasecretkey` | Session encryption key, recommended 32-64 character alphanumeric. |
 | `-e TRUST_PROXY=0` | Set to `1` to trust upstream proxies if reverse proxying. |
 | `-v /config` | Local path for planka config files. |
@@ -295,4 +307,5 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **18.09.24:** - Update default user docs.
 * **12.09.24:** - Initial Release.
