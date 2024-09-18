@@ -19,6 +19,10 @@ param_usage_include_env: true
 param_env_vars:
   - { env_var: "BASE_URL", env_value: "https://planka.example.com", desc: "The URL you will use to access planka including protocol, and port if not 80/443." }
   - { env_var: "DATABASE_URL", env_value: "postgresql://user:password@planka-db:5432/planka", desc: "Postgres database URL. Special characters must be [url encoded](https://en.wikipedia.org/wiki/Percent-encoding)." }
+  - { env_var: "DEFAULT_ADMIN_EMAIL", env_value: "demo@demo.demo", desc: "Email address for default user." }
+  - { env_var: "DEFAULT_ADMIN_USERNAME", env_value: "demo", desc: "Username for default user." }
+  - { env_var: "DEFAULT_ADMIN_PASSWORD", env_value: "demo", desc: "Password for default user." }
+  - { env_var: "DEFAULT_ADMIN_NAME", env_value: "Demo User", desc: "Display name for default user." }
   - { env_var: "SECRET_KEY", env_value: "notasecretkey", desc: "Session encryption key, recommended 32-64 character alphanumeric." }
   - { env_var: "TRUST_PROXY", env_value: "0", desc: "Set to `1` to trust upstream proxies if reverse proxying." }
 param_usage_include_vols: true
@@ -33,7 +37,7 @@ app_setup_block_enabled: true
 app_setup_block: |
   Web UI is accessible at http://SERVERIP:PORT. An external postgres database is required.
 
-  Default login is demo@demo.demo with a password of demo. Once you've created your own user account be sure to login to it and delete the demo account.
+  Once you've run your first time setup you can safely remove the DEFAULT_ environment variables. They will overwrite any changes made to the default user in the web UI (passwords, display names, etc.) on startup if left in place.
 
   ### Migration from Official Image
 
@@ -48,4 +52,5 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "18.09.24:", desc: "Update default user docs." }
   - { date: "12.09.24:", desc: "Initial Release." }

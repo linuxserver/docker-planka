@@ -25,7 +25,7 @@ else
     sleep infinity
 fi
 
-DEFAULT_ADMIN_EMAIL=demo@demo.demo DEFAULT_ADMIN_PASSWORD=demo DEFAULT_ADMIN_NAME=demo DEFAULT_ADMIN_USERNAME=demo s6-setuidgid abc node db/init.js
+s6-setuidgid abc node db/init.js
 
 symlinks=(
     /app/public/user-avatars
