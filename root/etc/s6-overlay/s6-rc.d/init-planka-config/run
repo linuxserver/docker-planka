@@ -25,7 +25,7 @@ else
     sleep infinity
 fi
 
-s6-setuidgid abc node db/init.js
+TZ=UTC s6-setuidgid abc node db/init.js
 
 symlinks=(
     /app/public/user-avatars
