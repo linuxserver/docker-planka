@@ -3,6 +3,9 @@
 
 export NODE_ENV=production
 
+# See https://github.com/plankanban/planka/issues/253
+export TZ=UTC
+
 HOME=/config exec \
     s6-notifyoncheck -d -n 300 -w 1000 -c "nc -z localhost 1337" \
     cd /app s6-setuidgid abc node app.js --prod
