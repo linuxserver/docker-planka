@@ -202,7 +202,6 @@ coreutils-env                              9.5-r1                 apk
 coreutils-fmt                              9.5-r1                 apk                   
 coreutils-sha512sum                        9.5-r1                 apk                   
 cors                                       2.8.5                  npm                   
-cross-spawn                                4.0.2                  npm                   
 cross-spawn                                7.0.6                  npm                   
 csrf                                       3.1.0                  npm                   
 curl                                       8.9.1-r2               apk                   
@@ -331,7 +330,7 @@ libidn2                                    2.3.7-r0               apk
 libintl                                    0.22.5-r0              apk                   
 libmd                                      1.1.0-r0               apk                   
 libncursesw                                6.4_p20240420-r1       apk                   
-libpq                                      16.5-r0                apk                   
+libpq                                      16.6-r0                apk                   
 libproc2                                   4.0.4-r0               apk                   
 libpsl                                     0.21.5-r1              apk                   
 libssl3                                    3.3.2-r0               apk                   
@@ -351,7 +350,6 @@ lodash.isstring                            4.0.1                  npm
 lodash.once                                4.1.1                  npm                   
 logform                                    2.7.0                  npm                   
 lru-cache                                  10.4.3                 npm                   
-lru-cache                                  4.1.5                  npm                   
 lru-cache                                  6.0.0                  npm                   
 lz4-libs                                   1.9.4-r5               apk                   
 machine                                    15.2.3                 npm                   
@@ -446,13 +444,12 @@ postgres-bytea                             1.0.0                  npm
 postgres-date                              1.0.7                  npm                   
 postgres-interval                          1.2.0                  npm                   
 postgresql-common                          1.2-r1                 apk                   
-postgresql16-client                        16.5-r0                apk                   
+postgresql16-client                        16.6-r0                apk                   
 procps-ng                                  4.0.4-r0               apk                   
 promise                                    5.0.0                  npm                   
 prompt                                     1.2.1                  npm                   
 proxy-addr                                 1.1.5                  npm                   
 proxy-addr                                 2.0.7                  npm                   
-pseudomap                                  1.0.2                  npm                   
 qs                                         6.13.0                 npm                   
 qs                                         6.4.1                  npm                   
 random-bytes                               1.0.0                  npm                   
@@ -483,7 +480,7 @@ safe-stable-stringify                      2.5.0                  npm
 safer-buffer                               2.1.2                  npm                   
 sails                                      1.5.13                 npm                   
 sails-disk                                 2.1.2                  npm                   
-sails-generate                             2.0.12                 npm                   
+sails-generate                             2.0.13                 npm                   
 sails-hook-add-policy                      UNKNOWN                npm                   
 sails-hook-orm                             4.0.3                  npm                   
 sails-hook-shout                           UNKNOWN                npm                   
@@ -572,7 +569,6 @@ waterline-utils                            1.4.5                  npm
 webidl-conversions                         3.0.1                  npm                   
 whatwg-url                                 5.0.0                  npm                   
 whelk                                      6.0.2                  npm                   
-which                                      1.3.1                  npm                   
 which                                      2.0.2                  npm                   
 wide-align                                 1.1.5                  npm                   
 window-size                                0.1.0                  npm                   
@@ -585,7 +581,6 @@ wrap-ansi                                  8.1.0                  npm
 wrappy                                     1.0.2                  npm                   
 ws                                         8.17.1                 npm                   
 xtend                                      4.0.2                  npm                   
-yallist                                    2.1.2                  npm                   
 yallist                                    4.0.0                  npm                   
 yargs                                      3.4.5                  npm                   
 zlib                                       1.3.1-r1               apk                   
