@@ -6,32 +6,29 @@ project_url: "https://github.com/plankanban/planka/"
 project_logo: "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/planka-logo.png"
 project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) is an elegant open source project tracking tool."
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
-
 # supported architectures
 available_architectures:
-  - { arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
-  - { arch: "{{ arch_arm64 }}", tag: "arm64v8-latest"}
-
+  - {arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
+  - {arch: "{{ arch_arm64 }}", tag: "arm64v8-latest"}
 # container parameters
 common_param_env_vars_enabled: true
 param_container_name: "{{ project_name }}"
 param_usage_include_env: true
 param_env_vars:
-  - { env_var: "BASE_URL", env_value: "https://planka.example.com", desc: "The URL you will use to access planka including protocol, and port if not 80/443." }
-  - { env_var: "DATABASE_URL", env_value: "postgresql://user:password@planka-db:5432/planka", desc: "Postgres database URL. Special characters must be [url encoded](https://en.wikipedia.org/wiki/Percent-encoding)." }
-  - { env_var: "DEFAULT_ADMIN_EMAIL", env_value: "demo@demo.demo", desc: "Email address for default user." }
-  - { env_var: "DEFAULT_ADMIN_USERNAME", env_value: "demo", desc: "Username for default user." }
-  - { env_var: "DEFAULT_ADMIN_PASSWORD", env_value: "demo", desc: "Password for default user." }
-  - { env_var: "DEFAULT_ADMIN_NAME", env_value: "Demo User", desc: "Display name for default user." }
-  - { env_var: "SECRET_KEY", env_value: "notasecretkey", desc: "Session encryption key, recommended 32-64 character alphanumeric." }
-  - { env_var: "TRUST_PROXY", env_value: "0", desc: "Set to `1` to trust upstream proxies if reverse proxying." }
+  - {env_var: "BASE_URL", env_value: "https://planka.example.com", desc: "The URL you will use to access planka including protocol, and port if not 80/443."}
+  - {env_var: "DATABASE_URL", env_value: "postgresql://user:password@planka-db:5432/planka", desc: "Postgres database URL. Special characters must be [url encoded](https://en.wikipedia.org/wiki/Percent-encoding)."}
+  - {env_var: "DEFAULT_ADMIN_EMAIL", env_value: "demo@demo.demo", desc: "Email address for default user."}
+  - {env_var: "DEFAULT_ADMIN_USERNAME", env_value: "demo", desc: "Username for default user."}
+  - {env_var: "DEFAULT_ADMIN_PASSWORD", env_value: "demo", desc: "Password for default user."}
+  - {env_var: "DEFAULT_ADMIN_NAME", env_value: "Demo User", desc: "Display name for default user."}
+  - {env_var: "SECRET_KEY", env_value: "notasecretkey", desc: "Session encryption key, recommended 32-64 character alphanumeric."}
+  - {env_var: "TRUST_PROXY", env_value: "0", desc: "Set to `1` to trust upstream proxies if reverse proxying."}
 param_usage_include_vols: true
 param_volumes:
-  - { vol_path: "/config", vol_host_path: "/path/to/{{ project_name }}/data", desc: "Local path for planka config files." }
+  - {vol_path: "/config", vol_host_path: "/path/to/{{ project_name }}/data", desc: "Local path for planka config files."}
 param_usage_include_ports: true
 param_ports:
-  - { external_port: "1337", internal_port: "1337", port_desc: "Planka web UI." }
-
+  - {external_port: "1337", internal_port: "1337", port_desc: "Planka web UI."}
 # application setup block
 app_setup_block_enabled: true
 app_setup_block: |
@@ -49,8 +46,50 @@ app_setup_block: |
   ├── project-background-images
   └── user-avatars
   ```
-
+# init diagram
+init_diagram: |
+  "planka:latest": {
+    docker-mods
+    base {
+      fix-attr +\nlegacy cont-init
+    }
+    docker-mods -> base
+    legacy-services
+    custom services
+    init-services -> legacy-services
+    init-services -> custom services
+    custom services -> legacy-services
+    legacy-services -> ci-service-check
+    init-migrations -> init-adduser
+    init-os-end -> init-config
+    init-config -> init-config-end
+    init-planka-config -> init-config-end
+    init-os-end -> init-crontab-config
+    init-mods-end -> init-custom-files
+    base -> init-envfile
+    base -> init-migrations
+    base -> init-mods
+    init-config-end -> init-mods
+    init-mods -> init-mods-end
+    init-mods-package-install -> init-mods-end
+    init-mods -> init-mods-package-install
+    base -> init-os-end
+    init-adduser -> init-os-end
+    init-envfile -> init-os-end
+    init-migrations -> init-os-end
+    init-config -> init-planka-config
+    init-custom-files -> init-services
+    init-mods-end -> init-services
+    init-services -> svc-cron
+    svc-cron -> legacy-services
+    init-services -> svc-planka
+    svc-planka -> legacy-services
+  }
+  Base Images: {
+    "baseimage-alpine:3.20"
+  }
+  "planka:latest" <- Base Images
 # changelog
 changelogs:
-  - { date: "18.09.24:", desc: "Update default user docs." }
-  - { date: "12.09.24:", desc: "Initial Release." }
+  - {date: "18.09.24:", desc: "Update default user docs."}
+  - {date: "12.09.24:", desc: "Initial Release."}
