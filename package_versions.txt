@@ -157,8 +157,8 @@ busybox-binsh                              1.36.1-r29             apk
 bytes                                      3.0.0                  npm                   
 bytes                                      3.1.2                  npm                   
 c-ares                                     1.33.1-r0              apk                   
-ca-certificates                            20240705-r0            apk                   
-ca-certificates-bundle                     20240705-r0            apk                   
+ca-certificates                            20241121-r0            apk                   
+ca-certificates-bundle                     20241121-r0            apk                   
 call-bind                                  1.0.7                  npm                   
 camelcase                                  1.2.1                  npm                   
 captains-log                               2.0.5                  npm                   
