@@ -6,9 +6,9 @@ cd /app || exit 1
 mkdir -p /config/logs
 
 if [[ -n ${DATABASE_URL} ]]; then
-    DB_HOST=$(echo "${DATABASE_URL}" | awk -F '@' '{print $NF}' | awk -F ':' '{print $1}' | awk -F '/' '{print $1}')
-    DB_PORT=$(echo "${DATABASE_URL}" | awk -F '@' '{print $NF}' | awk -F ':' '{print $2}' | awk -F '/' '{print $1}')
-    DB_USER=$(echo "${DATABASE_URL}" | awk -F '@' '{print $1}' | awk -F '//' '{print $2}' | awk -F ':' '{print $1}')
+    DB_HOST=$(awk -F '@|:|/' '{print $6}' <<<"${DATABASE_URL}")
+    DB_PORT=$(awk -F '@|:|/' '{print $7}' <<<"${DATABASE_URL}")
+    DB_USER=$(awk -F '@|:|/' '{print $4}' <<<"${DATABASE_URL}")
     if [[ ! ${DB_PORT} =~ [0-9]+ ]]; then DB_PORT="5432"; fi
     echo "Waiting for DB ${DB_HOST} to become available on port ${DB_PORT}..."
     END=$((SECONDS + 30))
