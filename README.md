@@ -73,6 +73,14 @@ Copy your `user-avatars`, `project-background-images`, and `attachments` folders
 └── user-avatars
 ```
 
+## Read-Only Operation
+
+This image can be run with a read-only container filesystem. For details please [read the docs](https://docs.linuxserver.io/misc/read-only/).
+
+## Non-Root Operation
+
+This image can be run with a non-root user. For details please [read the docs](https://docs.linuxserver.io/misc/non-root/).
+
 ## Usage
 
 To help you get started creating a container from this image you can either use docker-compose or the docker cli.
@@ -148,6 +156,8 @@ Containers are configured using parameters passed at runtime (such as those abov
 | `-e SECRET_KEY=notasecretkey` | Session encryption key, recommended 32-64 character alphanumeric. |
 | `-e TRUST_PROXY=0` | Set to `1` to trust upstream proxies if reverse proxying. |
 | `-v /config` | Local path for planka config files. |
+| `--read-only=true` | Run container with a read-only filesystem. Please [read the docs](https://docs.linuxserver.io/misc/read-only/). |
+| `--user=1000:1000` | Run container with a non-root user. Please [read the docs](https://docs.linuxserver.io/misc/non-root/). |
 
 ## Environment variables from files (Docker secrets)
 
@@ -311,5 +321,6 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **12.01.25:** - Update default user docs.
 * **18.09.24:** - Update default user docs.
 * **12.09.24:** - Initial Release.
