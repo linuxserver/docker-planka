@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM ghcr.io/linuxserver/baseimage-alpine:3.20 AS buildstage
+FROM ghcr.io/linuxserver/baseimage-alpine:3.21 AS buildstage
 
 # set version label
 ARG PLANKA_RELEASE
@@ -46,7 +46,7 @@ RUN \
     $HOME/.npm \
     /tmp/*
 
-FROM ghcr.io/linuxserver/baseimage-alpine:3.20
+FROM ghcr.io/linuxserver/baseimage-alpine:3.21
 
 ARG BUILD_DATE
 ARG VERSION
@@ -54,16 +54,21 @@ ARG PLANKA_RELEASE
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 LABEL maintainer="thespad"
 
-RUN \
-  apk add  --no-cache \
-    nodejs \
-    postgresql16-client && \
-    printf "Linuxserver.io version: ${VERSION}\nBuild-date: ${BUILD_DATE}" > /build_version
-
 COPY --from=buildstage /build/server/ /app
 COPY --from=buildstage /build/server/.env.sample /app/.env
 COPY --from=buildstage /build/client/build /app/public/
 COPY --from=buildstage /build/client/build/index.html /app/views/index.ejs
+
+RUN \
+  apk add  --no-cache \
+    nodejs \
+    postgresql16-client && \
+    printf "Linuxserver.io version: ${VERSION}\nBuild-date: ${BUILD_DATE}" > /build_version && \
+    echo "**** create symlinks ****" && \
+    /bin/bash -c \
+    'dst=(user-avatars project-background-images attachments logs); \
+    src=(public/user-avatars public/project-background-images private/attachments logs); \
+    for i in "${!src[@]}"; do rm -rf /app/"${src[i]}" && ln -s /config/"${dst[i]}" /app/"${src[i]}"; done'
 
 # copy local files
 COPY root/ /

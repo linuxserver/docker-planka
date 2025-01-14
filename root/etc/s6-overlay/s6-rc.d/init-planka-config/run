@@ -3,18 +3,21 @@
 
 cd /app || exit 1
 
+mkdir -p /config/logs
+
 if [[ -n ${DATABASE_URL} ]]; then
-    DB_HOST=$(echo "${DATABASE_URL}" | awk -F '@' '{print $NF}' | awk -F ':' '{print $1}' | awk -F '/' '{print $1}')
-    DB_PORT=$(echo "${DATABASE_URL}" | awk -F '@' '{print $NF}' | awk -F ':' '{print $2}' | awk -F '/' '{print $1}')
+    DB_HOST=$(awk -F '@|:|/' '{print $6}' <<<"${DATABASE_URL}")
+    DB_PORT=$(awk -F '@|:|/' '{print $7}' <<<"${DATABASE_URL}")
+    DB_USER=$(awk -F '@|:|/' '{print $4}' <<<"${DATABASE_URL}")
     if [[ ! ${DB_PORT} =~ [0-9]+ ]]; then DB_PORT="5432"; fi
     echo "Waiting for DB ${DB_HOST} to become available on port ${DB_PORT}..."
     END=$((SECONDS + 30))
     while [[ ${SECONDS} -lt ${END} ]] && [[ -n "${DB_HOST+x}" ]]; do
-        if pg_isready -h "${DB_HOST}" -p "${DB_PORT}" -q; then
-            if [[ ! -f /dbwait.lock ]]; then
+        if pg_isready -h "${DB_HOST}" -p "${DB_PORT}" -U "${DB_USER}" -q; then
+            if [[ ! -f /run/dbwait.lock ]]; then
                 sleep 5
             fi
-            touch /dbwait.lock
+            touch /run/dbwait.lock
             break
         else
             sleep 1
@@ -25,27 +28,13 @@ else
     sleep infinity
 fi
 
-TZ=UTC s6-setuidgid abc node db/init.js
+echo "Migrating database..."
+if [[ -z ${LSIO_NON_ROOT_USER} ]]; then
+    TZ=UTC s6-setuidgid abc node db/init.js
 
-symlinks=(
-    /app/public/user-avatars
-    /app/public/project-background-images
-    /app/private/attachments
-)
-
-shopt -s globstar dotglob
-
-for i in "${symlinks[@]}"; do
-    if [[ ! -L "$i" ]]; then
-        mkdir -p /config/"$(basename "$i")"
-        rm -rf "$i"
-        ln -s /config/"$(basename "$i")" "$i"
-    fi
-done
-
-shopt -u globstar dotglob
-
-# permissions
-lsiown -R abc:abc \
-    /config
-
+    # permissions
+    lsiown -R abc:abc \
+        /config
+else
+    TZ=UTC node db/init.js
+fi

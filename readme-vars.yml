@@ -29,6 +29,8 @@ param_volumes:
 param_usage_include_ports: true
 param_ports:
   - {external_port: "1337", internal_port: "1337", port_desc: "Planka web UI."}
+readonly_supported: true
+nonroot_supported: true
 # application setup block
 app_setup_block_enabled: true
 app_setup_block: |
@@ -91,5 +93,6 @@ init_diagram: |
   "planka:latest" <- Base Images
 # changelog
 changelogs:
+  - {date: "12.01.25:", desc: "Rebase to Alpine 3.21."}
   - {date: "18.09.24:", desc: "Update default user docs."}
   - {date: "12.09.24:", desc: "Initial Release."}
