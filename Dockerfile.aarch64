@@ -30,7 +30,7 @@ RUN \
     /tmp/planka.tar.gz -C \
     /build --strip-components=1 && \
   cd /build/server && \
-  npm install pnpm --global && \
+  npm install pnpm@9 --global && \
   pnpm import && \
   pnpm install --prod && \
   cd /build/client && \
