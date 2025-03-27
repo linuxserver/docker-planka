@@ -205,7 +205,7 @@ coreutils-sha512sum                        9.5-r2            apk
 cors                                       2.8.5             npm                   
 cross-spawn                                7.0.6             npm                   
 csrf                                       3.1.0             npm                   
-curl                                       8.12.1-r0         apk                   
+curl                                       8.12.1-r1         apk                   
 cycle                                      1.0.3             npm                   
 debug                                      2.6.9             npm                   
 debug                                      3.1.0             npm                   
@@ -323,7 +323,7 @@ kuler                                      2.0.0             npm
 libattr                                    2.5.2-r2          apk                   
 libbsd                                     0.12.2-r0         apk                   
 libcrypto3                                 3.3.3-r0          apk                   
-libcurl                                    8.12.1-r0         apk                   
+libcurl                                    8.12.1-r1         apk                   
 libgcc                                     14.2.0-r4         apk                   
 libidn2                                    2.3.7-r0          apk                   
 libintl                                    0.22.5-r0         apk                   
