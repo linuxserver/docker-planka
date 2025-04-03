@@ -548,7 +548,7 @@ triple-beam                                1.4.1             npm
 tslib                                      2.8.1             npm                   
 tsscmp                                     1.0.6             npm                   
 type-is                                    1.6.18            npm                   
-tzdata                                     2025a-r0          apk                   
+tzdata                                     2025b-r0          apk                   
 uid-safe                                   2.1.5             npm                   
 uid2                                       0.0.3             npm                   
 underscore                                 1.13.1            npm                   
