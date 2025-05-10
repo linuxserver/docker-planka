@@ -3,7 +3,7 @@
 
 cd /app || exit 1
 
-mkdir -p /config/logs
+mkdir -p /config/{favicons,user-avatars,background-images,attachments,logs}
 
 if [[ -n ${DATABASE_URL} ]]; then
     DB_HOST=$(awk -F '@|:|/' '{print $6}' <<<"${DATABASE_URL}")
