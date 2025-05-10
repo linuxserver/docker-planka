@@ -7,16 +7,15 @@ ARG PLANKA_RELEASE
 
 RUN \
   echo "**** install packages ****" && \
-  apk add  --no-cache \
+  apk add  --no-cache --virtual=build-dependencies \
+    build-base \
     giflib \
     libgsf \
     nodejs \
-    vips && \
-  apk add  --no-cache --virtual=build-dependencies \
-    build-base \
     npm \
     py3-setuptools \
-    python3-dev && \
+    python3-dev \
+    vips && \
   echo "**** install planka ****" && \
   if [ -z ${PLANKA_RELEASE+x} ]; then \
   PLANKA_RELEASE=$(curl -s https://api.github.com/repos/plankanban/planka/releases/latest \
@@ -30,12 +29,9 @@ RUN \
     /tmp/planka.tar.gz -C \
     /build --strip-components=1 && \
   cd /build/server && \
-  npm install pnpm@9 --global && \
-  pnpm import && \
-  pnpm install --prod && \
+  npm install --omit=dev && \
   cd /build/client && \
-  pnpm import && \
-  pnpm install --prod && \
+  npm install --omit=dev && \
   DISABLE_ESLINT_PLUGIN=true npm run build && \
   echo "**** cleanup ****" && \
   apk del --purge \
@@ -56,19 +52,19 @@ LABEL maintainer="thespad"
 
 COPY --from=buildstage /build/server/ /app
 COPY --from=buildstage /build/server/.env.sample /app/.env
-COPY --from=buildstage /build/client/build /app/public/
-COPY --from=buildstage /build/client/build/index.html /app/views/index.ejs
+COPY --from=buildstage /build/client/dist /app/public/
+COPY --from=buildstage /build/client/dist/index.html /app/views
 
 RUN \
   apk add  --no-cache \
     nodejs \
     postgresql16-client && \
-  printf "Linuxserver.io version: ${VERSION}\nBuild-date: ${BUILD_DATE}" > /build_version && \
-  echo "**** create symlinks ****" && \
-  /bin/bash -c \
-  'dst=(user-avatars project-background-images attachments logs); \
-  src=(public/user-avatars public/project-background-images private/attachments logs); \
-  for i in "${!src[@]}"; do rm -rf /app/"${src[i]}" && ln -s /config/"${dst[i]}" /app/"${src[i]}"; done'
+    printf "Linuxserver.io version: ${VERSION}\nBuild-date: ${BUILD_DATE}" > /build_version && \
+    echo "**** create symlinks ****" && \
+    /bin/bash -c \
+    'dst=(favicons user-avatars background-images attachments logs); \
+    src=(public/favicons public/user-avatars public/background-images private/attachments logs); \
+    for i in "${!src[@]}"; do rm -rf /app/"${src[i]}" && ln -s /config/"${dst[i]}" /app/"${src[i]}"; done'
 
 # copy local files
 COPY root/ /
