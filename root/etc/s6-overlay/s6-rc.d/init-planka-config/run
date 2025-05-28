@@ -28,6 +28,14 @@ else
     sleep infinity
 fi
 
+# v2 migration nonsense
+if [[ ! -f "/config/v2" ]] && [[ -f "/config/logs/planka.log" ]]; then
+    cp -a /config/project-background-images/. /config/background-images
+    TZ=UTC s6-setuidgid abc npm run db:upgrade
+    rm -rf /config/project-background-images
+    touch "/config/v2"
+fi
+
 echo "Migrating database..."
 if [[ -z ${LSIO_NON_ROOT_USER} ]]; then
     TZ=UTC s6-setuidgid abc node db/init.js

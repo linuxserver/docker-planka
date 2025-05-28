@@ -107,7 +107,8 @@ services:
       - DEFAULT_ADMIN_PASSWORD=demo
       - "DEFAULT_ADMIN_NAME=Demo User"
       - SECRET_KEY=notasecretkey
-      - TRUST_PROXY=0
+      - TRUST_PROXY=false
+      - DEFAULT_LANGUAGE=en-US #optional
     volumes:
       - /path/to/planka/data:/config
     ports:
@@ -130,7 +131,8 @@ docker run -d \
   -e DEFAULT_ADMIN_PASSWORD=demo \
   -e DEFAULT_ADMIN_NAME="Demo User" \
   -e SECRET_KEY=notasecretkey \
-  -e TRUST_PROXY=0 \
+  -e TRUST_PROXY=false \
+  -e DEFAULT_LANGUAGE=en-US `#optional` \
   -p 1337:1337 \
   -v /path/to/planka/data:/config \
   --restart unless-stopped \
@@ -154,7 +156,8 @@ Containers are configured using parameters passed at runtime (such as those abov
 | `-e DEFAULT_ADMIN_PASSWORD=demo` | Password for default user. |
 | `-e DEFAULT_ADMIN_NAME=Demo User` | Display name for default user. |
 | `-e SECRET_KEY=notasecretkey` | Session encryption key, recommended 32-64 character alphanumeric. |
-| `-e TRUST_PROXY=0` | Set to `1` to trust upstream proxies if reverse proxying. |
+| `-e TRUST_PROXY=false` | Set to `true` to trust upstream proxies if reverse proxying. |
+| `-e DEFAULT_LANGUAGE=en-US` | This sets the default language for sending notifications per user (if a user hasn't selected a language) and per board. |
 | `-v /config` | Local path for planka config files. |
 | `--read-only=true` | Run container with a read-only filesystem. Please [read the docs](https://docs.linuxserver.io/misc/read-only/). |
 | `--user=1000:1000` | Run container with a non-root user. Please [read the docs](https://docs.linuxserver.io/misc/non-root/). |
@@ -321,6 +324,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **28.05.25:** - Updates for v2. Users should update `TRUST_PROXY` to use `true`/`false` instead of `1`/`0`.
 * **12.01.25:** - Rebase to Alpine 3.21.
 * **18.09.24:** - Update default user docs.
 * **12.09.24:** - Initial Release.

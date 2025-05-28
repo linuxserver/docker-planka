@@ -58,6 +58,7 @@ COPY --from=buildstage /build/client/dist/index.html /app/views
 RUN \
   apk add  --no-cache \
     nodejs \
+    npm \
     postgresql16-client && \
     printf "Linuxserver.io version: ${VERSION}\nBuild-date: ${BUILD_DATE}" > /build_version && \
     echo "**** create symlinks ****" && \
