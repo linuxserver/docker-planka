@@ -3,7 +3,7 @@
 
 cd /app || exit 1
 
-mkdir -p /config/logs
+mkdir -p /config/{favicons,user-avatars,background-images,attachments,logs}
 
 if [[ -n ${DATABASE_URL} ]]; then
     DB_HOST=$(awk -F '@|:|/' '{print $6}' <<<"${DATABASE_URL}")
@@ -26,6 +26,14 @@ if [[ -n ${DATABASE_URL} ]]; then
 else
     echo "No database configured, sleeping..."
     sleep infinity
+fi
+
+# v2 migration nonsense
+if [[ ! -f "/config/v2" ]] && [[ -f "/config/logs/planka.log" ]]; then
+    cp -a /config/project-background-images/. /config/background-images
+    TZ=UTC s6-setuidgid abc npm run db:upgrade
+    rm -rf /config/project-background-images
+    touch "/config/v2"
 fi
 
 echo "Migrating database..."
