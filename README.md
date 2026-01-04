@@ -321,7 +321,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
-* **05.07.25:** - Rebase to Alpine 3.22. Updates for v2. Users should update `TRUST_PROXY` to use `true`/`false` instead of `1`/`0`.
+* **05.01.26:** - Rebase to Alpine 3.23. Updates for v2. Users should update `TRUST_PROXY` to use `true`/`false` instead of `1`/`0`.
 * **12.01.25:** - Rebase to Alpine 3.21.
 * **18.09.24:** - Update default user docs.
 * **12.09.24:** - Initial Release.
