@@ -23,7 +23,10 @@ param_env_vars:
   - {env_var: "DEFAULT_ADMIN_PASSWORD", env_value: "demo", desc: "Password for default user."}
   - {env_var: "DEFAULT_ADMIN_NAME", env_value: "Demo User", desc: "Display name for default user."}
   - {env_var: "SECRET_KEY", env_value: "notasecretkey", desc: "Session encryption key, recommended 32-64 character alphanumeric."}
-  - {env_var: "TRUST_PROXY", env_value: "0", desc: "Set to `1` to trust upstream proxies if reverse proxying."}
+  - {env_var: "TRUST_PROXY", env_value: "false", desc: "Set to `true` to trust upstream proxies if reverse proxying."}
+opt_param_usage_include_env: true
+opt_param_env_vars:
+  - {env_var: "DEFAULT_LANGUAGE", env_value: "en-US", desc: "This sets the default language for sending notifications per user (if a user hasn't selected a language) and per board."}
 param_usage_include_vols: true
 param_volumes:
   - {vol_path: "/config", vol_host_path: "/path/to/{{ project_name }}/data", desc: "Local path for planka config files."}
@@ -92,6 +95,7 @@ init_diagram: |
   "planka:latest" <- Base Images
 # changelog
 changelogs:
+  - {date: "13.02.26:", desc: "Rebase to Alpine 3.23. Updates for v2. Users should update `TRUST_PROXY` to use `true`/`false` instead of `1`/`0`."}
   - {date: "12.01.25:", desc: "Rebase to Alpine 3.21."}
   - {date: "18.09.24:", desc: "Update default user docs."}
   - {date: "12.09.24:", desc: "Initial Release."}
