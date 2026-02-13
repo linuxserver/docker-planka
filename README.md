@@ -83,7 +83,7 @@ This image can be run with a non-root user. For details please [read the docs](h
 To help you get started creating a container from this image you can either use docker-compose or the docker cli.
 
 >[!NOTE]
->Unless a parameter is flaged as 'optional', it is *mandatory* and a value must be provided.
+>Unless a parameter is flagged as 'optional', it is *mandatory* and a value must be provided.
 
 ### docker-compose (recommended, [click here for more info](https://docs.linuxserver.io/general/docker-compose))
 
@@ -321,7 +321,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
-* **05.01.26:** - Rebase to Alpine 3.23. Updates for v2. Users should update `TRUST_PROXY` to use `true`/`false` instead of `1`/`0`.
+* **13.02.26:** - Rebase to Alpine 3.23. Updates for v2. Users should update `TRUST_PROXY` to use `true`/`false` instead of `1`/`0`.
 * **12.01.25:** - Rebase to Alpine 3.21.
 * **18.09.24:** - Update default user docs.
 * **12.09.24:** - Initial Release.
