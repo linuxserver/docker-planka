@@ -60,13 +60,13 @@ RUN \
     nodejs \
     npm \
     postgresql16-client && \
-    printf "Linuxserver.io version: ${VERSION}\nBuild-date: ${BUILD_DATE}" > /build_version && \
-    echo "**** create symlinks ****" && \
-    mkdir -p /app/data/private/attachments && \
-    /bin/bash -c \
-    'dst=(favicons images attachments logs); \
-    src=(public/favicons data/protected data/private/attachments logs); \
-    for i in "${!src[@]}"; do rm -rf /app/"${src[i]}" && ln -s /config/"${dst[i]}" /app/"${src[i]}"; done'
+  printf "Linuxserver.io version: ${VERSION}\nBuild-date: ${BUILD_DATE}" > /build_version && \
+  echo "**** create symlinks ****" && \
+  mkdir -p /app/data/private/attachments && \
+  /bin/bash -c \
+  'dst=(favicons images attachments logs); \
+  src=(public/favicons data/protected data/private/attachments logs); \
+  for i in "${!src[@]}"; do rm -rf /app/"${src[i]}" && ln -s /config/"${dst[i]}" /app/"${src[i]}"; done'
 
 # copy local files
 COPY root/ /
