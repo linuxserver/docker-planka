@@ -444,7 +444,7 @@ libnpmpublish                              11.1.3            npm
 libnpmsearch                               9.0.1             npm                       
 libnpmteam                                 8.0.2             npm                       
 libnpmversion                              8.0.3             npm                       
-libpq                                      18.1-r0           apk                       
+libpq                                      18.2-r0           apk                       
 libproc2                                   4.0.5-r0          apk                       
 libpsl                                     0.21.5-r3         apk                       
 libssl3                                    3.5.5-r0          apk                       
@@ -602,7 +602,7 @@ postgres-bytea                             1.0.1             npm
 postgres-date                              1.0.7             npm                       
 postgres-interval                          1.2.0             npm                       
 postgresql-common                          1.2-r2            apk                       
-postgresql16-client                        16.11-r0          apk                       
+postgresql16-client                        16.12-r0          apk                       
 proc-log                                   5.0.0             npm                       
 proc-log                                   6.0.0             npm                       
 procps-ng                                  4.0.5-r0          apk                       
