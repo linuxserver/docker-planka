@@ -45,32 +45,29 @@ NAME                                       VERSION           TYPE
 @colors/colors                             1.6.0             npm                       
 @dabh/diagnostics                          2.0.8             npm                       
 @epic-web/invariant                        1.0.0             npm                       
+@gar/promise-retry                         1.0.2             npm                       
 @img/colour                                1.1.0             npm                       
 @img/sharp-libvips-linux-x64               1.2.4             npm                       
 @img/sharp-libvips-linuxmusl-x64           1.2.4             npm                       
 @img/sharp-linux-x64                       0.34.5            npm                       
 @img/sharp-linuxmusl-x64                   0.34.5            npm                       
-@isaacs/balanced-match                     4.0.1             npm                       
-@isaacs/brace-expansion                    5.0.0             npm                       
-@isaacs/cliui                              8.0.2             npm                       
 @isaacs/fs-minipass                        4.0.1             npm                       
 @isaacs/string-locale-compare              1.1.0             npm                       
 @my-scope/package-a                        0.0.0             npm                       
 @my-scope/package-b                        0.0.0             npm                       
 @npmcli/agent                              4.0.0             npm                       
-@npmcli/arborist                           9.1.7             npm                       
-@npmcli/config                             10.4.3            npm                       
-@npmcli/fs                                 4.0.0             npm                       
-@npmcli/git                                7.0.1             npm                       
-@npmcli/installed-package-contents         3.0.0             npm                       
+@npmcli/arborist                           9.4.0             npm                       
+@npmcli/config                             10.7.1            npm                       
+@npmcli/fs                                 5.0.0             npm                       
+@npmcli/git                                7.0.2             npm                       
 @npmcli/installed-package-contents         4.0.0             npm                       
-@npmcli/map-workspaces                     5.0.1             npm                       
+@npmcli/map-workspaces                     5.0.3             npm                       
 @npmcli/metavuln-calculator                9.0.3             npm                       
 @npmcli/name-from-folder                   4.0.0             npm                       
 @npmcli/node-gyp                           5.0.0             npm                       
-@npmcli/package-json                       7.0.2             npm                       
+@npmcli/package-json                       7.0.5             npm                       
 @npmcli/promise-spawn                      9.0.1             npm                       
-@npmcli/query                              4.0.1             npm                       
+@npmcli/query                              5.0.0             npm                       
 @npmcli/redact                             4.0.0             npm                       
 @npmcli/run-script                         10.0.3            npm                       
 @sailshq/binary-search-tree                0.2.7             npm                       
@@ -79,11 +76,11 @@ NAME                                       VERSION           TYPE
 @sailshq/nedb                              1.8.3             npm                       
 @sailshq/router                            1.3.10            npm                       
 @sigstore/bundle                           4.0.0             npm                       
-@sigstore/core                             3.0.0             npm                       
+@sigstore/core                             3.1.0             npm                       
 @sigstore/protobuf-specs                   0.5.0             npm                       
-@sigstore/sign                             4.0.1             npm                       
-@sigstore/tuf                              4.0.0             npm                       
-@sigstore/verify                           3.0.0             npm                       
+@sigstore/sign                             4.1.0             npm                       
+@sigstore/tuf                              4.0.1             npm                       
+@sigstore/verify                           3.1.0             npm                       
 @smithy/abort-controller                   4.2.10            npm                       
 @smithy/chunked-blob-reader                5.2.1             npm                       
 @smithy/chunked-blob-reader-native         4.2.2             npm                       
@@ -144,13 +141,12 @@ NAME                                       VERSION           TYPE
 @tokenizer/inflate                         0.4.1             npm                       
 @tokenizer/token                           0.3.0             npm                       
 @tufjs/canonical-json                      2.0.0             npm                       
-@tufjs/models                              4.0.0             npm                       
+@tufjs/models                              4.1.0             npm                       
 @types/cors                                2.8.19            npm                       
 @types/node                                25.3.3            npm                       
 @types/triple-beam                         1.3.5             npm                       
 @yarnpkg/lockfile                          1.1.0             npm                       
 Simple Launcher                            1.1.0.14          binary  (+5 duplicates)   
-abbrev                                     3.0.1             npm     (+1 duplicate)    
 abbrev                                     4.0.0             npm                       
 accepts                                    1.3.8             npm                       
 acl-libs                                   2.3.2-r1          apk                       
@@ -161,11 +157,8 @@ alpine-baselayout-data                     3.7.1-r8          apk
 alpine-keys                                2.6-r0            apk                       
 alpine-release                             3.23.3-r0         apk                       
 anchor                                     1.4.2             npm                       
-ansi-regex                                 5.0.1             npm                       
-ansi-regex                                 6.2.2             npm     (+1 duplicate)    
 ansi-styles                                3.2.1             npm     (+4 duplicates)   
-ansi-styles                                4.3.0             npm     (+1 duplicate)    
-ansi-styles                                6.2.3             npm                       
+ansi-styles                                4.3.0             npm                       
 apk-tools                                  3.0.5-r0          apk                       
 apprise                                    1.9.7             python                    
 aproba                                     2.1.0             npm                       
@@ -177,8 +170,8 @@ async                                      0.2.10            npm
 async                                      0.9.2             npm                       
 async                                      2.6.4             npm     (+1 duplicate)    
 async                                      3.2.6             npm     (+1 duplicate)    
-balanced-match                             1.0.2             npm     (+1 duplicate)    
-balanced-match                             4.0.4             npm                       
+balanced-match                             1.0.2             npm                       
+balanced-match                             4.0.4             npm     (+1 duplicate)    
 base64-js                                  1.5.1             npm                       
 base64id                                   2.0.0             npm                       
 bash                                       5.3.3-r1          apk                       
@@ -191,7 +184,8 @@ bluebird                                   3.2.1             npm
 body-parser                                1.20.4            npm                       
 bowser                                     2.14.1            npm                       
 brace-expansion                            1.1.12            npm                       
-brace-expansion                            2.0.2             npm     (+1 duplicate)    
+brace-expansion                            2.0.2             npm                       
+brace-expansion                            5.0.3             npm                       
 brace-expansion                            5.0.4             npm                       
 braces                                     3.0.3             npm                       
 brotli-libs                                1.2.0-r0          apk                       
@@ -205,7 +199,7 @@ bytes                                      3.1.2             npm
 c-ares                                     1.34.6-r0         apk                       
 ca-certificates                            20251003-r0       apk                       
 ca-certificates-bundle                     20251003-r0       apk                       
-cacache                                    20.0.2            npm                       
+cacache                                    20.0.3            npm                       
 call-bind                                  1.0.8             npm                       
 call-bind-apply-helpers                    1.0.2             npm                       
 call-bound                                 1.0.4             npm                       
@@ -216,20 +210,19 @@ certifi                                    2026.2.25         python
 chalk                                      2.3.0             npm     (+4 duplicates)   
 chalk                                      4.1.2             npm                       
 chalk                                      5.6.2             npm                       
-charset-normalizer                         3.4.4             python                    
+charset-normalizer                         3.4.5             python                    
 chownr                                     3.0.0             npm                       
 ci-info                                    3.9.0             npm                       
-ci-info                                    4.3.1             npm                       
-cidr-regex                                 5.0.1             npm                       
-cli-columns                                4.0.0             npm                       
+ci-info                                    4.4.0             npm                       
+cidr-regex                                 5.0.3             npm                       
 click                                      8.3.1             python                    
 cmd-shim                                   8.0.0             npm                       
 color                                      5.0.3             npm                       
 color-convert                              1.9.3             npm     (+4 duplicates)   
-color-convert                              2.0.1             npm     (+1 duplicate)    
+color-convert                              2.0.1             npm                       
 color-convert                              3.1.3             npm                       
 color-name                                 1.1.3             npm     (+4 duplicates)   
-color-name                                 1.1.4             npm     (+1 duplicate)    
+color-name                                 1.1.4             npm                       
 color-name                                 2.1.0             npm     (+1 duplicate)    
 color-string                               2.1.4             npm                       
 colorette                                  2.0.19            npm                       
@@ -239,7 +232,7 @@ commander                                  10.0.1            npm
 commander                                  2.11.0            npm                       
 commander                                  2.8.1             npm                       
 commander                                  9.5.0             npm                       
-common-ancestor-path                       1.0.1             npm                       
+common-ancestor-path                       2.0.0             npm                       
 common-js-file-extensions                  1.0.2             npm                       
 compressible                               2.0.18            npm                       
 compression                                1.8.1             npm                       
@@ -258,7 +251,7 @@ coreutils-fmt                              9.8-r1            apk
 coreutils-sha512sum                        9.8-r1            apk                       
 cors                                       2.8.6             npm                       
 cross-env                                  10.1.0            npm                       
-cross-spawn                                7.0.6             npm     (+1 duplicate)    
+cross-spawn                                7.0.6             npm                       
 csrf                                       3.1.0             npm                       
 cssesc                                     3.0.0             npm                       
 curl                                       8.17.0-r1         apk                       
@@ -280,23 +273,19 @@ depd                                       1.1.2             npm
 depd                                       2.0.0             npm                       
 destroy                                    1.2.0             npm                       
 detect-libc                                2.1.2             npm                       
-diff                                       8.0.2             npm                       
+diff                                       8.0.3             npm                       
 dotenv                                     16.6.1            npm                       
 dotenv                                     17.3.1            npm                       
 dotenv-cli                                 11.0.0            npm                       
 dotenv-expand                              12.0.3            npm                       
 dunder-proto                               1.0.1             npm                       
-eastasianwidth                             0.2.0             npm                       
 ecdsa-sig-formatter                        1.0.11            npm                       
 editions                                   6.22.0            npm                       
 ee-first                                   1.1.1             npm                       
 ejs                                        3.1.10            npm                       
-emoji-regex                                8.0.0             npm                       
-emoji-regex                                9.2.2             npm     (+1 duplicate)    
 enabled                                    2.0.0             npm                       
 encodeurl                                  1.0.2             npm     (+1 duplicate)    
 encodeurl                                  2.0.0             npm                       
-encoding                                   0.1.13            npm                       
 encrypted-attr                             1.0.6             npm                       
 engine.io                                  6.6.5             npm                       
 engine.io-parser                           5.2.3             npm                       
@@ -332,7 +321,6 @@ find-yarn-workspace-root                   2.0.0             npm
 findutils                                  4.10.0-r0         apk                       
 flaverr                                    1.10.0            npm                       
 fn.name                                    1.1.0             npm                       
-foreground-child                           3.3.1             npm                       
 forwarded                                  0.1.2             npm                       
 forwarded                                  0.2.0             npm                       
 fresh                                      0.5.2             npm                       
@@ -347,8 +335,7 @@ get-intrinsic                              1.3.0             npm
 get-package-type                           0.1.0             npm                       
 get-proto                                  1.0.1             npm                       
 getopts                                    2.3.0             npm                       
-glob                                       11.0.3            npm                       
-glob                                       13.0.6            npm                       
+glob                                       13.0.6            npm     (+1 duplicate)    
 glob                                       7.1.2             npm                       
 glob                                       7.2.3             npm     (+3 duplicates)   
 gopd                                       1.2.0             npm                       
@@ -369,7 +356,7 @@ https-proxy-agent                          7.0.6             npm
 i18n-2                                     0.7.3             npm                       
 ico-to-png                                 0.2.2             npm                       
 iconv-lite                                 0.4.24            npm                       
-iconv-lite                                 0.6.3             npm                       
+iconv-lite                                 0.7.2             npm                       
 icu-data-en                                76.1-r1           apk                       
 icu-libs                                   76.1-r1           apk                       
 idna                                       3.11              python                    
@@ -381,28 +368,25 @@ inflight                                   1.0.6             npm
 inherits                                   2.0.4             npm                       
 ini                                        1.3.8             npm                       
 ini                                        6.0.0             npm                       
-init-package-json                          8.2.3             npm                       
+init-package-json                          8.2.5             npm                       
 interpret                                  2.2.0             npm                       
 invalid_main                               UNKNOWN           npm                       
-ip-address                                 10.0.1            npm                       
-ip-regex                                   5.0.0             npm                       
+ip-address                                 10.1.0            npm                       
 ipaddr.js                                  1.4.0             npm                       
 ipaddr.js                                  1.9.1             npm                       
-is-cidr                                    6.0.1             npm                       
+is-cidr                                    6.0.3             npm                       
 is-core-module                             2.16.1            npm                       
 is-docker                                  2.2.1             npm                       
-is-fullwidth-code-point                    3.0.0             npm                       
 is-number                                  7.0.0             npm                       
 is-stream                                  2.0.1             npm                       
 is-wsl                                     1.1.0             npm                       
 is-wsl                                     2.2.0             npm                       
 isarray                                    0.0.1             npm                       
 isarray                                    2.0.5             npm                       
-isexe                                      2.0.0             npm     (+1 duplicate)    
-isexe                                      3.1.1             npm                       
+isexe                                      2.0.0             npm                       
+isexe                                      4.0.0             npm                       
 isstream                                   0.1.2             npm                       
 istextorbinary                             9.5.0             npm                       
-jackspeak                                  4.1.1             npm                       
 jake                                       10.9.4            npm                       
 jose                                       4.15.9            npm                       
 jq                                         1.8.1-r0          apk                       
@@ -434,16 +418,16 @@ libintl                                    0.24.1-r1         apk
 libmd                                      1.1.0-r0          apk                       
 libncursesw                                6.5_p20251123-r0  apk                       
 libnpmaccess                               10.0.3            npm                       
-libnpmdiff                                 8.0.10            npm                       
-libnpmexec                                 10.1.9            npm                       
-libnpmfund                                 7.0.10            npm                       
+libnpmdiff                                 8.1.3             npm                       
+libnpmexec                                 10.2.3            npm                       
+libnpmfund                                 7.0.17            npm                       
 libnpmorg                                  8.0.1             npm                       
-libnpmpack                                 9.0.10            npm                       
+libnpmpack                                 9.1.3             npm                       
 libnpmpublish                              11.1.3            npm                       
 libnpmsearch                               9.0.1             npm                       
 libnpmteam                                 8.0.2             npm                       
 libnpmversion                              8.0.3             npm                       
-libpq                                      18.2-r0           apk                       
+libpq                                      18.3-r0           apk                       
 libproc2                                   4.0.5-r0          apk                       
 libpsl                                     0.21.5-r3         apk                       
 libssl3                                    3.5.5-r0          apk                       
@@ -463,8 +447,7 @@ lodash.isstring                            4.0.1             npm
 lodash.once                                4.1.1             npm                       
 lodepng                                    2.3.0             npm                       
 logform                                    2.7.0             npm                       
-lru-cache                                  11.2.2            npm                       
-lru-cache                                  11.2.6            npm                       
+lru-cache                                  11.2.6            npm     (+1 duplicate)    
 lru-cache                                  6.0.0             npm                       
 lz4-libs                                   1.10.0-r0         apk                       
 machine                                    15.2.3            npm                       
@@ -474,7 +457,7 @@ machinepack-postgresql                     4.0.2             npm
 machinepack-process                        4.0.1             npm                       
 machinepack-redis                          2.0.7             npm                       
 machinepack-urls                           6.0.2-0           npm                       
-make-fetch-happen                          15.0.3            npm                       
+make-fetch-happen                          15.0.4            npm                       
 makeerror                                  1.0.12            npm                       
 markdown                                   3.10.2            python                    
 math-intrinsics                            1.1.0             npm                       
@@ -490,21 +473,19 @@ mime-db                                    1.52.0            npm     (+1 duplica
 mime-db                                    1.54.0            npm                       
 mime-types                                 2.1.35            npm     (+1 duplicate)    
 mime-types                                 3.0.2             npm                       
-minimatch                                  10.1.1            npm                       
+minimatch                                  10.2.2            npm                       
 minimatch                                  10.2.4            npm                       
 minimatch                                  3.1.5             npm                       
 minimatch                                  5.1.9             npm                       
-minimatch                                  9.0.5             npm                       
 minimist                                   1.2.6             npm                       
 minimist                                   1.2.8             npm                       
-minipass                                   3.3.6             npm     (+2 duplicates)   
-minipass                                   7.1.2             npm                       
-minipass                                   7.1.3             npm                       
+minipass                                   3.3.6             npm     (+1 duplicate)    
+minipass                                   7.1.3             npm     (+1 duplicate)    
 minipass-collect                           2.0.1             npm                       
-minipass-fetch                             5.0.0             npm                       
+minipass-fetch                             5.0.2             npm                       
 minipass-flush                             1.0.5             npm                       
 minipass-pipeline                          1.2.4             npm                       
-minipass-sized                             1.0.3             npm                       
+minipass-sized                             2.0.0             npm                       
 minizlib                                   3.1.0             npm                       
 mkdirp                                     0.5.6             npm                       
 moment                                     2.30.1            npm                       
@@ -515,8 +496,7 @@ multiparty                                 4.1.3             npm
 musl                                       1.2.5-r21         apk                       
 musl-utils                                 1.2.5-r21         apk                       
 mute-stream                                0.0.8             npm     (+1 duplicate)    
-mute-stream                                2.0.0             npm                       
-mute-stream                                3.0.0             npm                       
+mute-stream                                3.0.0             npm     (+1 duplicate)    
 mylib                                      0.0.0             npm                       
 ncurses-terminfo-base                      6.5_p20251123-r0  apk                       
 negotiator                                 0.6.3             npm                       
@@ -526,26 +506,23 @@ netcat-openbsd                             1.234.1-r0        apk
 nghttp2-libs                               1.68.0-r0         apk                       
 nghttp3                                    1.13.1-r0         apk                       
 node-addon-api                             8.6.0             npm                       
-node-gyp                                   12.1.0            npm                       
+node-gyp                                   12.2.0            npm                       
 node-gyp-build                             4.8.4             npm                       
 nodejs                                     24.13.0-r1        apk                       
 nodemailer                                 7.0.13            npm                       
-nopt                                       8.1.0             npm     (+1 duplicate)    
 nopt                                       9.0.0             npm                       
-npm                                        11.6.3            npm                       
-npm                                        11.6.3-r0         apk                       
-npm-audit-report                           6.0.0             npm                       
-npm-bundled                                4.0.0             npm                       
+npm                                        11.11.0           npm                       
+npm                                        11.11.0-r0        apk                       
+npm-audit-report                           7.0.0             npm                       
 npm-bundled                                5.0.0             npm                       
 npm-install-checks                         8.0.0             npm                       
-npm-normalize-package-bin                  4.0.0             npm                       
 npm-normalize-package-bin                  5.0.0             npm                       
 npm-package-arg                            13.0.2            npm                       
-npm-packlist                               10.0.3            npm                       
+npm-packlist                               10.0.4            npm                       
 npm-pick-manifest                          11.0.3            npm                       
 npm-profile                                12.0.1            npm                       
 npm-registry-fetch                         19.1.1            npm                       
-npm-user-validate                          3.0.0             npm                       
+npm-user-validate                          4.0.0             npm                       
 oauthlib                                   3.3.1             python                    
 object-assign                              4.1.1             npm                       
 object-hash                                2.2.0             npm                       
@@ -561,10 +538,10 @@ oniguruma                                  6.9.10-r0         apk
 open                                       7.4.2             npm                       
 openid-client                              5.7.1             npm                       
 opn                                        5.3.0             npm                       
-p-map                                      7.0.3             npm                       
-package-json-from-dist                     1.0.1             npm     (+1 duplicate)    
+p-map                                      7.0.4             npm                       
+package-json-from-dist                     1.0.1             npm                       
 packet-reader                              1.0.0             npm                       
-pacote                                     21.0.4            npm                       
+pacote                                     21.4.0            npm                       
 parasails                                  0.9.3             npm                       
 parley                                     3.8.3             npm                       
 parse-conflict-json                        5.0.1             npm                       
@@ -572,10 +549,9 @@ parseurl                                   1.3.2             npm
 parseurl                                   1.3.3             npm     (+4 duplicates)   
 patch-package                              8.0.1             npm                       
 path-is-absolute                           1.0.1             npm                       
-path-key                                   3.1.1             npm     (+1 duplicate)    
+path-key                                   3.1.1             npm                       
 path-parse                                 1.0.7             npm                       
-path-scurry                                2.0.0             npm                       
-path-scurry                                2.0.2             npm                       
+path-scurry                                2.0.2             npm     (+1 duplicate)    
 path-to-regexp                             0.1.12            npm     (+1 duplicate)    
 path-to-regexp                             1.9.0             npm                       
 pend                                       1.2.0             npm                       
@@ -596,23 +572,22 @@ picomatch                                  4.0.3             npm
 pip                                        25.0.1            python                    
 planka-server                              UNKNOWN           npm                       
 pluralize                                  1.2.1             npm                       
-postcss-selector-parser                    7.1.0             npm                       
+postcss-selector-parser                    7.1.1             npm                       
 postgres-array                             2.0.0             npm                       
 postgres-bytea                             1.0.1             npm                       
 postgres-date                              1.0.7             npm                       
 postgres-interval                          1.2.0             npm                       
 postgresql-common                          1.2-r2            apk                       
-postgresql16-client                        16.12-r0          apk                       
-proc-log                                   5.0.0             npm                       
-proc-log                                   6.0.0             npm                       
+postgresql16-client                        16.13-r0          apk                       
+proc-log                                   6.1.0             npm                       
 procps-ng                                  4.0.5-r0          apk                       
-proggy                                     3.0.0             npm                       
+proggy                                     4.0.0             npm                       
 promise                                    5.0.0             npm                       
 promise-all-reject-late                    1.0.1             npm                       
 promise-call-limit                         3.0.2             npm                       
 promise-retry                              2.0.1             npm                       
 prompt                                     1.2.1             npm                       
-promzard                                   2.0.0             npm                       
+promzard                                   3.0.1             npm                       
 proxy-addr                                 1.1.5             npm                       
 proxy-addr                                 2.0.7             npm                       
 pyyaml                                     6.0.3             python                    
@@ -624,8 +599,7 @@ range-parser                               1.2.1             npm
 raw-body                                   2.5.3             npm                       
 rc                                         1.2.8             npm                       
 read                                       1.0.7             npm     (+1 duplicate)    
-read                                       4.1.0             npm                       
-read                                       5.0.1             npm                       
+read                                       5.0.1             npm     (+1 duplicate)    
 read-cmd-shim                              6.0.0             npm                       
 readable-stream                            3.6.2             npm                       
 readline                                   8.3.1-r0          apk                       
@@ -642,6 +616,7 @@ resize-image-data                          0.3.1             npm
 resolve                                    1.22.11           npm                       
 resolve-from                               5.0.0             npm     (+1 duplicate)    
 retry                                      0.12.0            npm                       
+retry                                      0.13.1            npm                       
 revalidator                                0.1.8             npm                       
 rimraf                                     2.7.1             npm     (+3 duplicates)   
 rimraf                                     6.1.3             npm                       
@@ -663,8 +638,7 @@ sails-stringfile                           0.3.3             npm
 sails.io.js-dist                           1.2.1             npm                       
 scanelf                                    1.3.8-r2          apk                       
 semver                                     7.5.2             npm     (+3 duplicates)   
-semver                                     7.7.3             npm                       
-semver                                     7.7.4             npm     (+2 duplicates)   
+semver                                     7.7.4             npm     (+3 duplicates)   
 send                                       0.19.0            npm                       
 send                                       0.19.2            npm                       
 send                                       1.2.1             npm                       
@@ -676,14 +650,14 @@ set-function-length                        1.2.2             npm
 setprototypeof                             1.2.0             npm                       
 shadow                                     4.18.0-r0         apk                       
 sharp                                      0.34.5            npm                       
-shebang-command                            2.0.0             npm     (+1 duplicate)    
-shebang-regex                              3.0.0             npm     (+1 duplicate)    
+shebang-command                            2.0.0             npm                       
+shebang-regex                              3.0.0             npm                       
 side-channel                               1.1.0             npm                       
 side-channel-list                          1.0.0             npm                       
 side-channel-map                           1.0.1             npm                       
 side-channel-weakmap                       1.0.2             npm                       
 signal-exit                                4.1.0             npm                       
-sigstore                                   4.0.0             npm                       
+sigstore                                   4.1.0             npm                       
 simdjson                                   3.12.0-r0         apk                       
 simdutf                                    7.5.0-r1          apk                       
 skalibs-libs                               2.14.4.0-r0       apk                       
@@ -697,16 +671,14 @@ socket.io-parser                           4.2.5             npm
 socks                                      2.8.7             npm                       
 socks-proxy-agent                          8.0.5             npm                       
 sort-route-addresses                       0.0.4             npm                       
-spdx-correct                               3.2.0             npm                       
 spdx-exceptions                            2.5.0             npm                       
-spdx-expression-parse                      3.0.1             npm     (+1 duplicate)    
 spdx-expression-parse                      4.0.0             npm                       
-spdx-license-ids                           3.0.22            npm                       
+spdx-license-ids                           3.0.23            npm                       
 split2                                     4.2.0             npm                       
 sprintf-js                                 1.1.3             npm                       
 sqlite-libs                                3.51.2-r0         apk                       
 ssl_client                                 1.37.0-r30        apk                       
-ssri                                       13.0.0            npm                       
+ssri                                       13.0.1            npm                       
 stack-trace                                0.0.10            npm                       
 statuses                                   1.3.1             npm                       
 statuses                                   1.5.0             npm                       
@@ -714,12 +686,8 @@ statuses                                   2.0.1             npm
 statuses                                   2.0.2             npm                       
 stream-browserify                          3.0.0             npm                       
 streamifier                                0.1.1             npm                       
-string-width                               4.2.3             npm     (+1 duplicate)    
-string-width                               5.1.2             npm     (+1 duplicate)    
 string_decoder                             0.10.31           npm                       
 string_decoder                             1.3.0             npm                       
-strip-ansi                                 6.0.1             npm     (+1 duplicate)    
-strip-ansi                                 7.1.2             npm     (+1 duplicate)    
 strip-json-comments                        2.0.1             npm                       
 strnum                                     2.2.0             npm                       
 strtok3                                    10.3.4            npm                       
@@ -728,7 +696,7 @@ supports-color                             4.5.0             npm     (+4 duplica
 supports-color                             7.2.0             npm                       
 supports-preserve-symlinks-flag            1.0.0             npm                       
 switchback                                 2.0.5             npm                       
-tar                                        7.5.2             npm                       
+tar                                        7.5.9             npm                       
 tarn                                       3.0.2             npm                       
 text-hex                                   1.0.0             npm                       
 text-table                                 0.2.0             npm                       
@@ -747,17 +715,17 @@ treeverse                                  3.0.0             npm
 triple-beam                                1.4.1             npm                       
 tslib                                      2.8.1             npm                       
 tsscmp                                     1.0.6             npm                       
-tuf-js                                     4.0.0             npm                       
+tuf-js                                     4.1.0             npm                       
 type-is                                    1.6.18            npm                       
-tzdata                                     2025c-r0          apk                       
+tzdata                                     2026a-r0          apk                       
 uid-safe                                   2.1.5             npm                       
 uid2                                       0.0.3             npm                       
 uint8array-extras                          1.5.0             npm                       
 underscore                                 1.13.1            npm                       
 undici                                     7.22.0            npm                       
 undici-types                               7.18.2            npm                       
-unique-filename                            4.0.0             npm                       
-unique-slug                                5.0.0             npm                       
+unique-filename                            5.0.0             npm                       
+unique-slug                                6.0.0             npm                       
 universalify                               2.0.1             npm                       
 unpipe                                     1.0.0             npm                       
 urllib3                                    2.6.3             python                    
@@ -766,8 +734,7 @@ utils-merge                                1.0.1             npm
 utmps-libs                                 0.1.3.1-r0        apk                       
 uuid                                       11.1.0            npm                       
 uuid                                       7.0.0             npm                       
-validate-npm-package-license               3.0.4             npm                       
-validate-npm-package-name                  7.0.0             npm                       
+validate-npm-package-name                  7.0.2             npm                       
 validator                                  13.15.23          npm                       
 validator                                  13.15.26          npm                       
 vary                                       1.1.2             npm                       
@@ -779,23 +746,21 @@ waterline-schema                           1.0.0             npm
 waterline-sql-builder                      3.0.1             npm                       
 waterline-utils                            1.4.6             npm                       
 whelk                                      6.0.2             npm                       
-which                                      2.0.2             npm     (+1 duplicate)    
-which                                      6.0.0             npm                       
+which                                      2.0.2             npm                       
+which                                      6.0.1             npm                       
 window-size                                0.1.0             npm                       
 winston                                    2.4.7             npm                       
 winston                                    3.19.0            npm                       
 winston-transport                          4.9.0             npm                       
 wordwrap                                   0.0.2             npm                       
-wrap-ansi                                  7.0.0             npm                       
-wrap-ansi                                  8.1.0             npm                       
 wrappy                                     1.0.2             npm                       
 write-file-atomic                          7.0.0             npm                       
 ws                                         8.18.3            npm                       
 xtend                                      4.0.2             npm                       
-yallist                                    4.0.0             npm     (+1 duplicate)    
+yallist                                    4.0.0             npm     (+2 duplicates)   
 yallist                                    5.0.0             npm                       
 yaml                                       2.8.2             npm                       
 yargs                                      3.4.5             npm                       
-zlib                                       1.3.1-r2          apk                       
+zlib                                       1.3.2-r0          apk                       
 zstd-libs                                  1.5.7-r2          apk                       
 zxcvbn                                     4.4.2             npm                       
