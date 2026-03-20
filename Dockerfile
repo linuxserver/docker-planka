@@ -32,7 +32,7 @@ RUN \
   npm install --omit=dev && \
   cd /build/client && \
   npm install --omit=dev && \
-  DISABLE_ESLINT_PLUGIN=true npm run build && \
+  INDEX_FORMAT=ejs DISABLE_ESLINT_PLUGIN=true npm run build && \
   echo "**** cleanup ****" && \
   apk del --purge \
     build-dependencies && \
@@ -53,7 +53,6 @@ LABEL maintainer="thespad"
 COPY --from=buildstage /build/server/ /app
 COPY --from=buildstage /build/server/.env.sample /app/.env
 COPY --from=buildstage /build/client/dist /app/public/
-COPY --from=buildstage /build/client/dist/index.html /app/views
 
 RUN \
   apk add  --no-cache \
@@ -61,6 +60,7 @@ RUN \
     npm \
     postgresql16-client && \
   printf "Linuxserver.io version: ${VERSION}\nBuild-date: ${BUILD_DATE}" > /build_version && \
+  mv /app/public/index.ejs /app/views/ && \
   echo "**** create symlinks ****" && \
   mkdir -p /app/data/private/attachments && \
   /bin/bash -c \
