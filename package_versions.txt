@@ -216,7 +216,7 @@ chownr                                     3.0.0             npm
 ci-info                                    3.9.0             npm                       
 ci-info                                    4.4.0             npm                       
 cidr-regex                                 5.0.3             npm                       
-click                                      8.3.1             python                    
+click                                      8.3.2             python                    
 cmd-shim                                   8.0.0             npm                       
 color                                      5.0.3             npm                       
 color-convert                              1.9.3             npm     (+4 duplicates)   
