@@ -207,7 +207,7 @@ call-bound                                 1.0.4             npm
 camelcase                                  1.2.1             npm                       
 captains-log                               2.0.5             npm                       
 catatonit                                  0.2.1-r0          apk                       
-certifi                                    2026.2.25         python                    
+certifi                                    2026.4.22         python                    
 chalk                                      2.3.0             npm     (+4 duplicates)   
 chalk                                      4.1.2             npm                       
 chalk                                      5.6.2             npm                       
@@ -216,7 +216,7 @@ chownr                                     3.0.0             npm
 ci-info                                    3.9.0             npm                       
 ci-info                                    4.4.0             npm                       
 cidr-regex                                 5.0.3             npm                       
-click                                      8.3.2             python                    
+click                                      8.3.3             python                    
 cmd-shim                                   8.0.0             npm                       
 color                                      5.0.3             npm                       
 color-convert                              1.9.3             npm     (+4 duplicates)   
@@ -361,7 +361,7 @@ iconv-lite                                 0.4.24            npm
 iconv-lite                                 0.7.2             npm                       
 icu-data-en                                76.1-r1           apk                       
 icu-libs                                   76.1-r1           apk                       
-idna                                       3.11              python                    
+idna                                       3.13              python                    
 ieee754                                    1.2.1             npm                       
 ignore-walk                                8.0.0             npm                       
 imurmurhash                                0.1.4             npm                       
