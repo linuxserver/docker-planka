@@ -216,7 +216,7 @@ chownr                                     3.0.0             npm
 ci-info                                    3.9.0             npm                       
 ci-info                                    4.4.0             npm                       
 cidr-regex                                 5.0.3             npm                       
-click                                      8.4.0             python                    
+click                                      8.4.1             python                    
 cmd-shim                                   8.0.0             npm                       
 color                                      5.0.3             npm                       
 color-convert                              1.9.3             npm     (+4 duplicates)   
@@ -361,7 +361,7 @@ iconv-lite                                 0.4.24            npm
 iconv-lite                                 0.7.2             npm                       
 icu-data-en                                76.1-r1           apk                       
 icu-libs                                   76.1-r1           apk                       
-idna                                       3.15              python                    
+idna                                       3.17              python                    
 ieee754                                    1.2.1             npm                       
 ignore-walk                                8.0.0             npm                       
 imurmurhash                                0.1.4             npm                       
