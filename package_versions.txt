@@ -156,7 +156,7 @@ agent-base                                 7.1.4             npm
 alpine-baselayout                          3.7.2-r0          apk                       
 alpine-baselayout-data                     3.7.2-r0          apk                       
 alpine-keys                                2.6-r0            apk                       
-alpine-release                             3.23.4-r0         apk                       
+alpine-release                             3.23.5-r0         apk                       
 anchor                                     1.4.2             npm                       
 ansi-styles                                3.2.1             npm     (+4 duplicates)   
 ansi-styles                                4.3.0             npm                       
@@ -510,7 +510,7 @@ nghttp2-libs                               1.69.0-r0         apk
 node-addon-api                             8.6.0             npm                       
 node-gyp                                   12.2.0            npm                       
 node-gyp-build                             4.8.4             npm                       
-nodejs                                     24.14.1-r0        apk                       
+nodejs                                     24.17.0-r0        apk                       
 nodemailer                                 8.0.5             npm                       
 nopt                                       9.0.0             npm                       
 npm                                        11.11.0           npm                       
