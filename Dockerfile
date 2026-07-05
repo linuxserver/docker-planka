@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM ghcr.io/linuxserver/baseimage-alpine:3.23 AS buildstage
+FROM ghcr.io/linuxserver/baseimage-alpine:3.24 AS buildstage
 
 # set version label
 ARG PLANKA_RELEASE
@@ -42,7 +42,7 @@ RUN \
     $HOME/.npm \
     /tmp/*
 
-FROM ghcr.io/linuxserver/baseimage-alpine:3.23
+FROM ghcr.io/linuxserver/baseimage-alpine:3.24
 
 ARG BUILD_DATE
 ARG VERSION
