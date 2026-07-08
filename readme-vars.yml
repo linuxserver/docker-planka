@@ -91,7 +91,7 @@ init_diagram: |
     svc-planka -> legacy-services
   }
   Base Images: {
-    "baseimage-alpine:3.23"
+    "baseimage-alpine:3.24"
   }
   "planka:latest" <- Base Images
 # changelog
