@@ -506,7 +506,7 @@ nghttp2-libs                               1.69.0-r0         apk
 node-addon-api                             8.6.0             npm                       
 node-gyp                                   12.2.0            npm                       
 node-gyp-build                             4.8.4             npm                       
-nodejs                                     24.17.0-r0        apk                       
+nodejs                                     24.18.1-r0        apk                       
 nodemailer                                 8.0.5             npm                       
 nopt                                       9.0.0             npm                       
 npm                                        11.12.1           npm                       
