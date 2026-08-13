@@ -148,7 +148,7 @@ certifi                                    2026.7.22         python
 chalk                                      2.3.0             npm     (+4 duplicates)   
 chalk                                      4.1.2             npm                       
 chalk                                      5.6.2             npm                       
-charset-normalizer                         3.4.9             python                    
+charset-normalizer                         3.5.0             python                    
 chownr                                     3.0.0             npm                       
 ci-info                                    3.9.0             npm                       
 ci-info                                    4.4.0             npm                       
@@ -501,7 +501,7 @@ pgpass                                     1.0.5             npm
 picocolors                                 1.1.1             npm                       
 picomatch                                  2.3.2             npm                       
 picomatch                                  4.0.3             npm                       
-pip                                        26.1.1            python                    
+pip                                        26.2.1            python                    
 planka-server                              UNKNOWN           npm                       
 pluralize                                  1.2.1             npm                       
 postcss-selector-parser                    7.1.1             npm                       
