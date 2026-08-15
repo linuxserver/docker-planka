@@ -19,7 +19,7 @@ RUN \
   echo "**** install planka ****" && \
   if [ -z ${PLANKA_RELEASE+x} ]; then \
   PLANKA_RELEASE=$(curl -s https://api.github.com/repos/plankanban/planka/releases/latest \
-    | awk '/tag_name/{print $4;exit}' FS='[""]'); \
+    | jq -r '.tag_name'); \
   fi && \
   mkdir -p /build && \
   curl -o \
