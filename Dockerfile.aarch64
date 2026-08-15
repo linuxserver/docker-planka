@@ -19,7 +19,7 @@ RUN \
   echo "**** install planka ****" && \
   if [ -z ${PLANKA_RELEASE+x} ]; then \
   PLANKA_RELEASE=$(curl -s https://api.github.com/repos/plankanban/planka/releases/latest \
-    | awk '/tag_name/{print $4;exit}' FS='[""]'); \
+    | jq -r '.tag_name'); \
   fi && \
   mkdir -p /build && \
   curl -o \
@@ -64,8 +64,8 @@ RUN \
   echo "**** create symlinks ****" && \
   mkdir -p /app/data/private/attachments && \
   /bin/bash -c \
-  'dst=(favicons images attachments logs); \
-  src=(public/favicons data/protected data/private/attachments logs); \
+  'dst=(logs); \
+  src=(logs); \
   for i in "${!src[@]}"; do rm -rf /app/"${src[i]}" && ln -s /config/"${dst[i]}" /app/"${src[i]}"; done'
 
 # copy local files

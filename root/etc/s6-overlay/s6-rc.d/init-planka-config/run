@@ -43,6 +43,14 @@ if [[ ! -f "/config/v2" ]] && [[ -f "/config/logs/planka.log" ]]; then
     touch "/config/v2"
 fi
 
+# Fix upload paths due to symlinks no longer being supported OOTB because of path traversal concerns
+sed -i -e "s|uploadsBasePath:.*|uploadsBasePath: '/config',|" \
+  -e "s|faviconsPathSegment:.*|faviconsPathSegment: 'favicons',|" \
+  -e "s|userAvatarsPathSegment:.*|userAvatarsPathSegment: 'images/user-avatars',|" \
+  -e "s|backgroundImagesPathSegment:.*|backgroundImagesPathSegment: 'images/background-images',|" \
+  -e "s|attachmentsPathSegment:.*|attachmentsPathSegment: 'attachments',|" \
+  /app/config/custom.js
+
 echo "Running database migrations..."
 if [[ -z ${LSIO_NON_ROOT_USER} ]]; then
     TZ=UTC s6-setuidgid abc node db/init.js
