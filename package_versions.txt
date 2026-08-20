@@ -295,7 +295,7 @@ iconv-lite                                 0.4.24            npm
 iconv-lite                                 0.7.2             npm                       
 icu-data-en                                78.1-r0           apk                       
 icu-libs                                   78.1-r0           apk                       
-idna                                       3.18              python                    
+idna                                       3.19              python                    
 ieee754                                    1.2.1             npm                       
 ignore-walk                                8.0.0             npm                       
 include-all                                4.0.3             npm                       
