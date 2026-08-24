@@ -58,7 +58,13 @@ RUN \
   apk add  --no-cache \
     nodejs \
     npm \
-    postgresql16-client && \
+    postgresql16-client \
+    python3 && \
+  python3 -m venv /lsiopy && \
+  pip install -U --no-cache-dir \
+    pip \
+    setuptools && \
+  pip install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine-3.24/ -r /app/requirements.txt && \
   printf "Linuxserver.io version: ${VERSION}\nBuild-date: ${BUILD_DATE}" > /build_version && \
   mv /app/public/index.ejs /app/views/ && \
   echo "**** create symlinks ****" && \
