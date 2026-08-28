@@ -159,7 +159,7 @@ cli                                        UNKNOWN           binary
 cli-32                                     UNKNOWN           binary                    
 cli-64                                     UNKNOWN           binary                    
 cli-arm64                                  UNKNOWN           binary                    
-click                                      8.4.2             python  (+1 duplicate)    
+click                                      8.5.0             python  (+1 duplicate)    
 cmd-shim                                   8.0.0             npm                       
 color                                      5.0.3             npm                       
 color-convert                              1.9.3             npm     (+4 duplicates)   
