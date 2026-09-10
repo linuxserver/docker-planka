@@ -97,7 +97,7 @@ alpine-release                             3.24.1-r0         apk
 anchor                                     1.4.2             npm                       
 ansi-styles                                3.2.1             npm     (+4 duplicates)   
 ansi-styles                                4.3.0             npm                       
-apk-tools                                  3.0.7-r0          apk                       
+apk-tools                                  3.0.8-r0          apk                       
 apprise                                    1.9.7             python  (+1 duplicate)    
 aproba                                     2.1.0             npm                       
 archy                                      1.0.0             npm                       
@@ -198,7 +198,7 @@ cross-env                                  10.1.0            npm
 cross-spawn                                7.0.6             npm                       
 csrf                                       3.1.0             npm                       
 cssesc                                     3.0.0             npm                       
-curl                                       8.21.0-r0         apk                       
+curl                                       8.22.0-r0         apk                       
 cycle                                      1.0.3             npm                       
 debug                                      2.6.9             npm     (+9 duplicates)   
 debug                                      3.1.0             npm     (+1 duplicate)    
@@ -339,7 +339,7 @@ jake                                       10.9.4            npm
 jaraco-context                             6.1.0             python                    
 jaraco-functools                           4.4.0             python                    
 jaraco-text                                4.0.0             python                    
-jq                                         1.8.1-r0          apk                       
+jq                                         1.8.2-r0          apk                       
 json-parse-even-better-errors              5.0.0             npm                       
 json-stable-stringify                      1.3.0             npm                       
 json-stringify-nice                        1.1.4             npm                       
@@ -357,12 +357,12 @@ klaw-sync                                  6.0.0             npm
 knex                                       2.4.2             npm                       
 knex                                       3.3.0             npm                       
 kuler                                      2.0.0             npm                       
-libapk                                     3.0.7-r0          apk                       
+libapk                                     3.0.8-r0          apk                       
 libattr                                    2.5.2-r2          apk                       
 libbsd                                     0.12.2-r0         apk                       
 libbz2                                     1.0.8-r6          apk                       
 libcrypto3                                 3.5.8-r0          apk                       
-libcurl                                    8.21.0-r0         apk                       
+libcurl                                    8.22.0-r0         apk                       
 libexpat                                   2.8.4-r0          apk                       
 libffi                                     3.5.2-r1          apk                       
 libgcc                                     15.2.0-r5         apk                       
@@ -715,7 +715,7 @@ wrappy                                     1.0.2             npm
 write-file-atomic                          7.0.1             npm                       
 ws                                         8.21.1            npm                       
 xtend                                      4.0.2             npm                       
-xz-libs                                    5.8.3-r0          apk                       
+xz-libs                                    5.8.4-r0          apk                       
 yallist                                    4.0.0             npm     (+2 duplicates)   
 yallist                                    5.0.0             npm                       
 yaml                                       2.9.0             npm                       
