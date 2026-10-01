@@ -150,7 +150,7 @@ certifi                                    2026.7.22         python  (+1 duplica
 chalk                                      2.3.0             npm     (+4 duplicates)   
 chalk                                      4.1.2             npm                       
 chalk                                      5.6.2             npm                       
-charset-normalizer                         3.5.1             python  (+1 duplicate)    
+charset-normalizer                         3.5.2             python  (+1 duplicate)    
 chownr                                     3.0.0             npm                       
 ci-info                                    3.9.0             npm                       
 ci-info                                    4.4.0             npm                       
@@ -414,7 +414,7 @@ machinepack-redis                          2.0.7             npm
 machinepack-urls                           6.0.2-0           npm                       
 make-fetch-happen                          15.0.5            npm                       
 makeerror                                  1.0.12            npm                       
-markdown                                   3.10.3            python  (+1 duplicate)    
+markdown                                   3.11              python  (+1 duplicate)    
 math-intrinsics                            1.1.0             npm                       
 media-typer                                0.3.0             npm                       
 merge-defaults                             0.2.2             npm                       
@@ -479,7 +479,7 @@ npm-pick-manifest                          11.0.3            npm
 npm-profile                                12.0.1            npm                       
 npm-registry-fetch                         19.1.1            npm                       
 npm-user-validate                          4.0.0             npm                       
-oauthlib                                   3.3.1             python  (+1 duplicate)    
+oauthlib                                   4.0.0             python  (+1 duplicate)    
 object-assign                              4.1.1             npm                       
 object-inspect                             1.13.4            npm                       
 object-keys                                1.1.1             npm                       
@@ -544,10 +544,10 @@ prompt                                     1.2.1             npm
 promzard                                   3.0.1             npm                       
 proxy-addr                                 1.1.5             npm                       
 proxy-addr                                 2.0.7             npm                       
-pyc                                        3.14.7-r1         apk                       
-python3                                    3.14.7-r1         apk                       
-python3-pyc                                3.14.7-r1         apk                       
-python3-pycache-pyc0                       3.14.7-r1         apk                       
+pyc                                        3.14.8-r0         apk                       
+python3                                    3.14.8-r0         apk                       
+python3-pyc                                3.14.8-r0         apk                       
+python3-pycache-pyc0                       3.14.8-r0         apk                       
 pyyaml                                     6.0.3             python  (+1 duplicate)    
 qrcode-terminal                            0.12.0            npm                       
 qs                                         6.15.3            npm                       
