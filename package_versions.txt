@@ -136,9 +136,9 @@ buffer-writer                              2.0.0             npm
 busybox                                    1.37.0-r31        apk                       
 busybox-binsh                              1.37.0-r31        apk                       
 bytes                                      3.1.2             npm                       
-c-ares                                     1.34.8-r0         apk                       
-ca-certificates                            20260909-r0       apk                       
-ca-certificates-bundle                     20260909-r0       apk                       
+c-ares                                     1.34.9-r0         apk                       
+ca-certificates                            20261020-r0       apk                       
+ca-certificates-bundle                     20261020-r0       apk                       
 cacache                                    20.0.4            npm                       
 call-bind                                  1.0.9             npm                       
 call-bind-apply-helpers                    1.0.2             npm                       
@@ -146,7 +146,7 @@ call-bound                                 1.0.4             npm
 camelcase                                  1.2.1             npm                       
 captains-log                               2.0.5             npm                       
 catatonit                                  0.2.1-r0          apk                       
-certifi                                    2026.7.22         python  (+1 duplicate)    
+certifi                                    2026.10.19        python  (+1 duplicate)    
 chalk                                      2.3.0             npm     (+4 duplicates)   
 chalk                                      4.1.2             npm                       
 chalk                                      5.6.2             npm                       
@@ -363,7 +363,7 @@ libbsd                                     0.12.2-r0         apk
 libbz2                                     1.0.8-r6          apk                       
 libcrypto3                                 3.5.9-r0          apk                       
 libcurl                                    8.22.0-r0         apk                       
-libexpat                                   2.8.5-r0          apk                       
+libexpat                                   2.9.0-r0          apk                       
 libffi                                     3.5.2-r1          apk                       
 libgcc                                     15.2.0-r5         apk                       
 libidn2                                    2.3.8-r0          apk                       
@@ -414,7 +414,7 @@ machinepack-redis                          2.0.7             npm
 machinepack-urls                           6.0.2-0           npm                       
 make-fetch-happen                          15.0.5            npm                       
 makeerror                                  1.0.12            npm                       
-markdown                                   3.11.1            python  (+1 duplicate)    
+markdown                                   3.11.2            python  (+1 duplicate)    
 math-intrinsics                            1.1.0             npm                       
 media-typer                                0.3.0             npm                       
 merge-defaults                             0.2.2             npm                       
@@ -494,7 +494,7 @@ opn                                        5.3.0             npm
 otplib                                     12.0.1            npm                       
 p-map                                      7.0.4             npm                       
 package-json-from-dist                     1.0.1             npm                       
-packaging                                  26.0              python                    
+packaging                                  26.3              python                    
 packet-reader                              1.0.0             npm                       
 pacote                                     21.5.0            npm                       
 parasails                                  0.9.3             npm                       
@@ -523,7 +523,8 @@ pgpass                                     1.0.5             npm
 picocolors                                 1.1.1             npm                       
 picomatch                                  2.3.2             npm                       
 picomatch                                  4.0.3             npm                       
-pip                                        26.2.1            python  (+1 duplicate)    
+pip                                        26.2.1            python                    
+pip                                        26.2.2            python                    
 planka-server                              UNKNOWN           npm                       
 platformdirs                               4.4.0             python                    
 pluralize                                  1.2.1             npm                       
@@ -604,7 +605,7 @@ serve-static                               1.16.3            npm
 serve-static                               2.2.1             npm                       
 set-function-length                        1.2.2             npm                       
 setprototypeof                             1.2.0             npm                       
-setuptools                                 84.0.0            python                    
+setuptools                                 84.2.1            python                    
 shadow                                     4.18.0-r1         apk                       
 sharp                                      0.35.3            npm                       
 shebang-command                            2.0.0             npm                       
