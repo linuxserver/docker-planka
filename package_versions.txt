@@ -145,11 +145,11 @@ call-bound                                 1.0.4             npm
 camelcase                                  1.2.1             npm                       
 captains-log                               2.0.5             npm                       
 catatonit                                  0.2.1-r0          apk                       
-certifi                                    2026.10.23        python  (+1 duplicate)    
+certifi                                    2026.11.20        python  (+1 duplicate)    
 chalk                                      2.3.0             npm     (+4 duplicates)   
 chalk                                      4.1.2             npm                       
 chalk                                      5.6.2             npm                       
-charset-normalizer                         3.5.2             python  (+1 duplicate)    
+charset-normalizer                         3.5.3             python  (+1 duplicate)    
 chownr                                     3.0.0             npm                       
 ci-info                                    3.9.0             npm                       
 ci-info                                    4.4.0             npm                       
@@ -360,10 +360,10 @@ libapk                                     3.0.9-r0          apk
 libattr                                    2.5.2-r2          apk                       
 libbsd                                     0.12.2-r0         apk                       
 libbz2                                     1.0.8-r6          apk                       
-libcrypto3                                 3.5.9-r0          apk                       
+libcrypto3                                 3.5.9-r1          apk                       
 libcurl                                    8.23.0-r0         apk                       
-libexpat                                   2.10.0-r0         apk                       
-libffi                                     3.5.2-r1          apk                       
+libexpat                                   2.11.0-r0         apk                       
+libffi                                     3.8.1-r0          apk                       
 libgcc                                     15.2.0-r5         apk                       
 libidn2                                    2.3.8-r0          apk                       
 libintl                                    1.0-r0            apk                       
@@ -383,7 +383,7 @@ libpanelw                                  6.6_p20260516-r0  apk
 libpq                                      18.7-r0           apk                       
 libproc2                                   4.0.6-r0          apk                       
 libpsl                                     0.21.5-r3         apk                       
-libssl3                                    3.5.9-r0          apk                       
+libssl3                                    3.5.9-r1          apk                       
 libstdc++                                  15.2.0-r5         apk                       
 libunistring                               1.4.2-r0          apk                       
 linux-pam                                  1.7.1-r2          apk                       
@@ -413,7 +413,7 @@ machinepack-redis                          2.0.7             npm
 machinepack-urls                           6.0.2-0           npm                       
 make-fetch-happen                          15.0.5            npm                       
 makeerror                                  1.0.12            npm                       
-markdown                                   3.11.3            python  (+1 duplicate)    
+markdown                                   3.11.4            python  (+1 duplicate)    
 math-intrinsics                            1.1.0             npm                       
 media-typer                                0.3.0             npm                       
 merge-defaults                             0.2.2             npm                       
@@ -545,11 +545,12 @@ prompt                                     1.2.1             npm
 promzard                                   3.0.1             npm                       
 proxy-addr                                 1.1.5             npm                       
 proxy-addr                                 2.0.8             npm                       
-pyc                                        3.14.10-r1        apk                       
-python3                                    3.14.10-r1        apk                       
-python3-pyc                                3.14.10-r1        apk                       
-python3-pycache-pyc0                       3.14.10-r1        apk                       
-pyyaml                                     6.0.3             python  (+1 duplicate)    
+pyc                                        3.14.10-r2        apk                       
+python3                                    3.14.10-r2        apk                       
+python3-ndbm                               3.14.10-r3        apk                       
+python3-pyc                                3.14.10-r2        apk                       
+python3-pycache-pyc0                       3.14.10-r2        apk                       
+pyyaml                                     6.0.4             python  (+1 duplicate)    
 qrcode-terminal                            0.12.0            npm                       
 qs                                         6.16.1            npm                       
 random-bytes                               1.0.0             npm                       
